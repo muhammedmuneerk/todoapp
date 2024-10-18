@@ -138,7 +138,7 @@ body {
 
 .input input:focus {
   outline: none; /* Remove default outline */
-  /* background: rgba(255, 255, 255, 0.2); /* Lighten background on focus */
+  background: rgba(255, 255, 255, 0.2); /* Lighten background on focus */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on focus */
   transform: scale(1.02); /* Slightly scale input on focus */
   color: white; /* Ensure text remains white when focused */
