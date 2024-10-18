@@ -123,8 +123,8 @@ body {
 }
 
 .input i {
-  /* background-color: #4CAF50; */
-  background-color:rgba(0, 128, 0, 0.8); 
+  background-color: #4CAF50;
+  /* background-color:rgba(0, 128, 0, 0.8);  */
   color: white;
   padding: 0.8rem;
   border-radius: 0 5px 5px 0;
@@ -133,8 +133,8 @@ body {
 }
 
 .input i:hover {
-  /* background-color: #45a049; */
-  background-color: rgba(30, 144, 255, 0.3);
+  background-color: #45a049;
+  /* background-color: rgba(30, 144, 255, 0.3); */
   
 }
 
