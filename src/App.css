@@ -111,32 +111,67 @@ body {
 .input {
   display: flex;
   margin-bottom: 1.5rem;
+  transition: transform 0.2s ease; /* Smooth transition for input on focus */
+}
+
+.input:hover {
+  transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 .input input {
   flex-grow: 1;
-  padding: 0.8rem;
+  padding: 0.8rem 1rem; /* Added horizontal padding for better spacing */
   border: none;
-  border-radius: 5px 0 0 5px;
+  border-radius: 10px 0 0 10px; /* More rounded corners */
   font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1); /* Light background for glass effect */
+  backdrop-filter: blur(20px); /* Stronger blur for depth */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.input input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Light placeholder text for contrast */
+  transition: color 0.3s ease; /* Smooth transition for placeholder */
+}
+
+.input input:focus {
+  outline: none; /* Remove default outline */
+  background: rgba(255, 255, 255, 0.2); /* Lighten background on focus */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on focus */
+  transform: scale(1.02); /* Slightly scale input on focus */
+}
+
+.input input:focus::placeholder {
+  color: rgba(255, 255, 255, 1); /* Make placeholder visible on focus */
 }
 
 .input i {
-  background-color: #4CAF50;
-  /* background-color:rgba(0, 128, 0, 0.8);  */
+  background-color: rgba(0, 128, 0, 0.9); /* Darker green for glassmorphism */
   color: white;
   padding: 0.8rem;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 10px 10px 0; /* More rounded corners */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
 }
 
 .input i:hover {
-  background-color: #45a049;
-  /* background-color: rgba(30, 144, 255, 0.3); */
-  
+  background-color: rgba(0, 128, 0, 1); /* Fully opaque hard green on hover */
+  transform: scale(1.05); /* Slightly scale on hover */
 }
+
+.input i:active {
+  transform: scale(0.95); /* Slightly shrink when clicked */
+}
+
+/* Optional: Add focus ring */
+.input input:focus-visible {
+  /* box-shadow: 0 0 0 2px rgba(0, 255, 0, 0.7); /* Green focus ring */
+}
+
+
+
 
 @media (max-width: 480px) {
   .input input {
