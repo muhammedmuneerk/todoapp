@@ -128,6 +128,7 @@ body {
   backdrop-filter: blur(20px); /* Stronger blur for depth */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  color: white; /* Set text color to white */
 }
 
 .input input::placeholder {
@@ -140,6 +141,7 @@ body {
   background: rgba(255, 255, 255, 0.2); /* Lighten background on focus */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on focus */
   transform: scale(1.02); /* Slightly scale input on focus */
+  color: white; /* Ensure text remains white when focused */
 }
 
 .input input:focus::placeholder {
@@ -169,7 +171,6 @@ body {
 .input input:focus-visible {
   /* box-shadow: 0 0 0 2px rgba(0, 255, 0, 0.7); /* Green focus ring */
 }
-
 
 
 
